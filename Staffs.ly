@@ -18,8 +18,8 @@ thomas = \relative {
     \repeat volta 2 {
       es,4. \mf ( g8 | as8 g8 c8 d8 | es4. d8 | es4 ) d16 ( c bes as ) | g4. ( es8 as g fis g | f2~ ) | f4. r8 |
       bes4. ( d8 | c b c a | bes4. g8 | as4 ) g16 ( as bes as ) | g4. ( e8 | f as g f | es2~ ) | es4. r8 |
-      es4. ( g8 | as8 g8 c8 d8 | es4. d8 | es4 d16 c bes as | g4. es8 as g fis g | as2~ ) | as4. r8 |
-      as4. ( c8 ) | c8 b16 ( c ) d ( c bes as ) | g4. fis16 ( as ) | g2 | as4. ( g8 | as8 ) bes16 ( c ) bes ( as g f ) | g2~ | 
+      es4. ( g8 | as8 g8 c8 d8 | es4. d8 | es4 d16 c bes as | g4. es8 as g fis g | as2~ \< ) | as4. r8 |
+      as4. \f ( c8 ) | c8 b16 ( c ) d ( c bes as ) | g4. fis16 ( as ) | g4. r8 | as4. ( g8 | as8 ) bes16 ( c ) bes ( as g f ) | g2~ | 
     }
     \alternative {
       { g8 r r4 | }
@@ -48,11 +48,11 @@ thomas = \relative {
     
     \repeat volta 2 {
       r8 f, \f r f16 f | f8 r r4 | r8 f16 f f8 r | r2 | r8 des8 \f r des16 des | des8 r r4 | r8 des16 des des8 des8 | des8 \noBeam des16 \p ( c des8 ) d |
-      es4 es | r8 es ( f g ) | as4 as | r8 as16 ( g as8 ) as ( | g8 ) des16 ( c des8 ) f8 ( | es4 ) des8. es16 ( | c2~ ) |
+      es4 es | r8 es ( \< f g ) | as4 \mf as | r8 as16 ( \< g as8 ) as ( | g8 ) \f des16 ( c des8 ) f8 ( | es4 ) des8. es16 ( | c2~ ) |
     }
     \alternative {
       { c8 r r4 | }
-      { c8 \noBeam es' ( d des ) | }
+      { c8 \noBeam es' \> ( d des ) \! | }
     }
     \bar "|."
     \mark \markup { \musicglyph #"scripts.segno" }
@@ -68,8 +68,8 @@ bertl = \relative {
     \appoggiatura { bes'16 \f c d } es8-^ r8 r4 | r2 | c8. \p \< bes16 as8 g8 | f8 \! r8 r4 |
     \repeat volta 2 {
       R2*16 |
-      g4. \mf ( bes8 | c8 bes8 es8 f8 | g4. fis8 | g4 ) f16 ( es d c ) | bes4. ( g8 c bes a bes | c2~ ) | c4. r8 |
-      c4. ( es8 ) | es8 d16 ( es ) f ( es d c ) | bes4. a16 ( c ) | bes2 | f'4. ( e8 | f8 ) g16 ( as ) g ( f es d ) | es2~ |
+      g4. \mf ( bes8 | c8 bes8 es8 f8 | g4. fis8 | g4 ) f16 ( es d c ) | bes4. ( g8 c bes a bes | c2~ \< ) | c4. r8 |
+      c4. \f ( es8 ) | es8 d16 ( es ) f ( es d c ) | bes4. a16 ( c ) | bes4. r8 | f'4. ( e8 | f8 ) g16 ( as ) g ( f es d ) | es2~ |
     }
     \alternative {
       { es8 r r4 | }
@@ -95,7 +95,7 @@ bertl = \relative {
 
     \repeat volta 2 {
       r8 as, \f r as16 as | as8 r r4 | r8 as16 as as8 r | r2 | r8 bes \f r bes16 bes | bes8 r r4 | r8 bes16 bes bes8 bes | bes \noBeam f16 \p ( e f8 ) fis |
-      g4 g | r8 g ( as bes ) | c4 c4 | r8 c16 ( b c8 ) f ( | es8 ) bes16 ( a bes8 ) des8 ( | c4 ) g8. bes16 ( | as2~ ) | 
+      g4 g | r8 g ( \< as bes ) | c4 \mf c4 | r8 c16 ( \< b c8 ) f ( | es8 \f ) bes16 ( a bes8 ) des8 ( | c4 ) g8. bes16 ( | as2~ ) | 
     }
     \alternative {
       { as8 r r4 | }
@@ -105,40 +105,57 @@ bertl = \relative {
   }
 }
 
-trbOne = \relative c' {
+leonhard = \relative c' {
   \clef bass
-  \key aes \major
-  \time 3/4 \partial 2
-  { 
-    r4 r | \mark \markup { \musicglyph #"scripts.segno" } r4\mf as-. as-. | r as2 | r4 f-. f-. | as( bes as) | r4 as-. as-. | 
-    r4 g-. g-. | r es( bes') | bes-. r g-. | r g-. r | r bes( g) | r as( f) | r as-. as-. | as-- bes-- b-- | r4 as-. as-. | 
-    r4 as-. as-. | r as2 | r4 f-. f-. | as( bes as) | r4 as-. as-. | 
-    r4 g-. g-. | r es( bes') | bes-. r g-. | r g-. r | r bes( g) | des'8-- c-- bes4-. des-. | c8-- des-- c4-. c8-- des-- | c4-. r r |
-    \mark \markup { \musicglyph #"scripts.coda" }
-    \bar "||" \key es \major \break
-    c4-. r r | bes8-- bes-- c4-. bes8-- bes-- | bes4-. es8( d) c-. bes-. | g4( g bes-.) | r f'8( es) d-. c-. | b4-- b4-. b4-. | c2 b4( | b4) bes2 | 
-    r4 a-. a-. | r a2 | r4 bes-. bes-. | r bes2 | d8( es) c-. bes-. as-. g-. | 
-    f4-. r r | g8( bes) des-. c-. bes-. as-. | g4-. r r^\markup {\musicglyph #"scripts.segno" _ \musicglyph #"scripts.coda" } | 
-    \break
-  
-    % Trio
-    \mark \markup { \musicglyph #"scripts.coda" }
-    \key des \major
-    \repeat volta 2 { 
-      r4\mp as-. as-. | r as-. as-. | r4 as8 bes as4-. | as8 as8 as4-. as4-. | 
-      r4\< bes-- bes-. | r bes-- bes-.\! | \break
+  \key es \major
+  \time 2/4
+  {
+    \appoggiatura { bes16 \f c d } es8-^ r8 r4 | r2 | es8. \p \< d16 c8 b8 | bes8 \! r8 r4 |
+    \repeat volta 2 {
+      g4. \mf ( bes8 | c8 bes8 es8 f8 | g4. fis8 | g4 ) f16 ( es d c ) | bes4. ( g8 c bes a bes | as2~ \< ) | as4. r8 |
+      d4. ( f8 | e f es cis | d4. b8 | c4 ) bes16 ( c d c ) | bes4. ( g8 | as c bes as | g2~ ) | g4. r8 |
+      bes4. \p ( bes8 | es4 es | <\parenthesize bes' bes,>2 | <\parenthesize bes bes,>4 ) bes,8 f' | es4. ( es8 | es es es es | es2~ \< ) | es4. r8 |
+      es4. \f ( as8 | as4 ) f8 ( d ) | es ( g, ) c4 | bes4. r8 | d4. ( cis8 | d8 ) r8 r16 es ( d c ) | bes8. g16 g8 c |
     }
     \alternative {
-      { r4 as-- as8 bes | as es as4-. bes-- | r4 bes-. bes-. | r as-- c-. | r des( f,) | as-. as8 f g as | 
-        r4 des8( c) bes-. as-. | g4-- as-- bes-- | c-. r as-. | r4\> as-. as-. \! | \break }
-      { r4 as-- as8 f | as es as4-. bes-- | r4 bes-. bes-. | ges-- as-- bes-- | r as-. as-- | des8 c bes c des4-. | }
+      { bes8 r r4 | }
+      { bes8 r bes-> r | }
     }
-    bes2 as4 | as2 des8 bes | as2\> ges4\! | f-.\mp r r | f-.\p r r | f2.
+    \bar "||"
+    \break
+
+    \mark "Trio"
+    g8. \mf \< ( g16 as8. as16 | g8-. ) \! r8 <\parenthesize bes' bes,>4-- | r8 es,-. r es-. | r es \> ( f g \! ) |
+    \key as \major
+    \mark \markup { \musicglyph #"scripts.segno" }
+    \set Score.repeatCommands = #'(start-repeat)
+      as2~ \p | as4 es8. ( e16 ) | f2~ | f2 | g2~ | g4 des8. ( d16 ) | es2~ | es8 r r c16 ( \mf bes ) |
+      as4. ( g8 | as bes c des | c-! ) r bes8. a16 | bes4. a16 ( bes ) | es4. f16 ( es | des8-! ) c ( b des | c2~ ) | c8 r r4 | \break
+      es2~ \p | es4 as | as2~ | as8 g ( as a ) | bes2~ | bes4 g | as2~ | as8 r r as,16 ( f ) |
+      es4. \p \< ( es8 | es es es as | as4. g8 | as8 ) as-. des4 | bes8-. \f g4 bes8 ( | bes ) g4 f8 | es2~ |
+    \set Score.repeatCommands = #'((volta "1."))
+      es8 \noBeam es' ( f g ) |
+    \set Score.repeatCommands = #'((volta #f) end-repeat (volta "2."))
+      es,8 \breathe bes' c16 ( bes ) as g \bar "||"
+    \set Score.repeatCommands = #(list (list 'volta fine) '(volta #f))
+      es8 r es8 r
+    \set Score.repeatCommands = #'((volta #f))
+    \break
+    
+    \repeat volta 2 {
+      f4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2~ | as2 \p \glissando |
+      bes8 bes r bes | r bes \< r bes | r as \mf r as | r as \< r as | r g \f r g | r g r g | r as16 as as8 as |
+    }
+    \alternative {
+      { as8 \breathe bes \f c16 ( bes ) as g | }
+      { as8 \noBeam es' \> ( f g ) \! | }
+    }
     \bar "|."
+    \mark \markup { \musicglyph #"scripts.segno" }
   }
 }
 
-trbTwo = \relative c {
+gerhard = \relative c {
   \clef bass
   \key aes \major
   \time 3/4 \partial 2
@@ -180,8 +197,8 @@ willi = \relative c, {
     \repeat volta 2 {
       es,8 \mf r bes r | es r bes r | es r bes r | es r16 c' bes8 g | es r bes r | es8 r g es | f r bes r16 d | f8 es d c |
       bes r f r | d r f r | bes,4 d8 f | bes r16 d f8 d | bes r f r | d r bes r | es8 r c4 ( | bes g8 f |
-      es2~ ) | es8 g bes d | es r bes'4 ( | c8 ) bes ( g f | es ) r bes r | es r f g | as4. c8 ( | es ) f ( es ) c |
-      as8 r es r | as4 ( f8 ) d | es r bes'4-- | es8-_ r16 c bes8 g | f r bes r | f \noBeam bes [ c d ] | es8-_ r16 c bes8 g |
+      es2~ ) | es8 g bes d | es r bes'4 ( | c8 ) bes ( g f | es ) r bes r | es r f g | as4. \< c8 ( | es ) f ( es ) c |
+      as8 \f r es r | as4 ( f8 ) d | es r bes'4-- | es8-_ r16 c bes8 g | f r bes r | f \noBeam bes [ c d ] | es8-_ r16 c bes8 g |
     }
     \alternative {
       { es8 c' bes16 ( as ) g f | }
@@ -210,10 +227,10 @@ willi = \relative c, {
     
     \repeat volta 2 {
       f'4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2~ | f8 r r4 |
-      es8 r bes r | es4 f8 g | as r es r | as8. f'16 es8 c | bes r es, r | bes' r es, r |  as8. f'16 es8 c |
+      es8 \p r bes r | es4 \< f8 g | as \mf r es r | as8. f'16 \< es8 c | bes \f r es, r | bes' r es, r |  as8. f'16 es8 c |
     }
     \alternative {
-      { as8 \breathe bes c16 ( bes ) as g | }
+      { as8 \breathe bes \f c16 ( bes ) as g | }
       { as8 r r4 | }
     }
     \bar "|."
