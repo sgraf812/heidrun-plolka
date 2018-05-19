@@ -86,7 +86,9 @@ bertl = \relative {
       R2*16 |
       as2~ \p | as4 es | f2~ | f4. fis8 ( | g2~ | g4 ) des8. ( d16 | es2~ ) | es8 r r c16 ( bes ) |
       as4. \p \< ( g8 | as bes b c | des4. c8 | des \f f g8-! [ ) r16 f ] | es4 bes8 des | c4 g8 bes | as2~ | 
-    \set Score.repeatCommands = #'((volta "1. 2."))
+    \set Score.repeatCommands = #'((volta "1."))
+      as8 r r4
+    \set Score.repeatCommands = #'((volta #f) end-repeat (volta "2."))
       as8 r r4 \bar "||"
     \set Score.repeatCommands = #(list (list 'volta fine))
       as8 r \appoggiatura { es'16 f g } as8 r |
