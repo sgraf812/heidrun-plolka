@@ -3,4 +3,4 @@
 \header {
   instrument = "Willi in C"
 }
-\score { \willi }
+\score { { \clef bass \willi } }

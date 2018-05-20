@@ -3,4 +3,4 @@
 \header {
   instrument = "Wastl in C"
 }
-\score { \wastl }
+\score { { \clef bass \wastl } }

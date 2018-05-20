@@ -10,7 +10,6 @@
 fine = \markup { \text \small Fine }
 
 thomas = \relative {
-  \clef treble
   \key es \major
   \time 2/4
   {
@@ -61,7 +60,6 @@ thomas = \relative {
 
 bertl = \relative {
   \compressFullBarRests
-  \clef treble
   \key es \major
   \time 2/4
   {
@@ -108,7 +106,6 @@ bertl = \relative {
 }
 
 leonhard = \relative c' {
-  \clef bass
   \key es \major
   \time 2/4
   {
@@ -158,7 +155,6 @@ leonhard = \relative c' {
 }
 
 gerhard = \relative c {
-  \clef bass
   \key es \major
   \time 2/4
   {
@@ -208,7 +204,6 @@ gerhard = \relative c {
 }
 
 wastl = \relative c {
-  \clef bass
   \key es \major
   \time 2/4
   {
@@ -260,7 +255,6 @@ wastl = \relative c {
 }
 
 willi = \relative c, {
-  \clef bass
   \key es \major
   \time 2/4
   {

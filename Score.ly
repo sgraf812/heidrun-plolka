@@ -12,16 +12,16 @@
     { instrumentName = #"Bertl" shortInstrumentName = #"Ber" }
     \bertl
     \new Staff \with
-    { instrumentName = #"Leonhard" shortInstrumentName = #"Leo" }
-    \leonhard
+    { instrumentName = #"Leonhard " shortInstrumentName = #"Leo" }
+    { \clef bass \leonhard }
     \new Staff \with
-    { instrumentName = #"Gerhard" shortInstrumentName = #"Ger" }
-    \gerhard
+    { instrumentName = #"Gerhard " shortInstrumentName = #"Ger" }
+    { \clef bass \gerhard }
     \new Staff \with
-    { instrumentName = #"Wastl" shortInstrumentName = #"Was" }
-    \wastl
+    { instrumentName = #"Wastl " shortInstrumentName = #"Was" }
+    { \clef bass \wastl }
     \new Staff \with
-    { instrumentName = #"Willi" shortInstrumentName = #"Wil" }
-    \willi
+    { instrumentName = #"Willi " shortInstrumentName = #"Wil" }
+    { \clef bass \willi }
   >>
 }
