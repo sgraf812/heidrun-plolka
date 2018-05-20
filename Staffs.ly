@@ -38,7 +38,7 @@ thomas = \relative {
       c'2~ \p | c4 c | des2~ | des8 c ( des d ) | es2~ | es4 bes8. ( b16 ) | c2~ | c8 r r es,16 ( des ) |
       c4. \p \< ( b8 | c des es e | f4. e8 | f \f as bes8-! [ ) r16 as ] | g4 des8 f | es4 des8 es | c2~ |
     \set Score.repeatCommands = #'((volta "1."))
-      c8 \noBeam es' ( d des ) |
+      c8 \noBeam es' \> ( d des ) \! |
     \set Score.repeatCommands = #'((volta #f) end-repeat (volta "2."))
       c8 r r4 \bar "||"
     \set Score.repeatCommands = #(list (list 'volta fine) '(volta #f))
@@ -127,7 +127,7 @@ leonhard = \relative c' {
     \break
 
     \mark "Trio"
-    g8. \mf \< ( g16 as8. as16 | g8-. ) \! r8 <\parenthesize bes' bes,>4-- | r8 es,-. r es-. | r es \> ( f g \! ) |
+    g8. \mf \< ( g16 as8. as16 | g8-. ) \! r8 <\parenthesize bes' bes,>4-- | r8 es, r es | r es \> ( f g \! ) |
     \key as \major
     \mark \markup { \musicglyph #"scripts.segno" }
     \set Score.repeatCommands = #'(start-repeat)
@@ -136,7 +136,7 @@ leonhard = \relative c' {
       es2~ \p | es4 as | as2~ | as8 g ( as a ) | bes2~ | bes4 g | as2~ | as8 r r as,16 ( f ) |
       es4. \p \< ( es8 | es es es as | as4. g8 | as8 ) as-. des4 | bes8-. \f g4 bes8 ( | bes ) g4 f8 | es2~ |
     \set Score.repeatCommands = #'((volta "1."))
-      es8 \noBeam es' ( f g ) |
+      es8 \noBeam es' \> ( f g ) \! |
     \set Score.repeatCommands = #'((volta #f) end-repeat (volta "2."))
       es,8 \breathe bes' c16 ( bes ) as g \bar "||"
     \set Score.repeatCommands = #(list (list 'volta fine) '(volta #f))
@@ -145,8 +145,8 @@ leonhard = \relative c' {
     \break
     
     \repeat volta 2 {
-      f4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2~ | as2 \p \glissando |
-      bes8 bes r bes | r bes \< r bes | r as \mf r as | r as \< r as | r g \f r g | r g r g | r as16 as as8 as |
+      f4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2 | as2 \p \glissando |
+      des8 bes r bes | r bes \< r bes | r as \mf r as | r as \< r as | r g \f r g | r g r g | r as16 as as8 as |
     }
     \alternative {
       { as8 \breathe bes \f c16 ( bes ) as g | }
@@ -159,34 +159,101 @@ leonhard = \relative c' {
 
 gerhard = \relative c {
   \clef bass
-  \key aes \major
-  \time 3/4 \partial 2
-  { 
-    r4 r | \mark \markup { \musicglyph #"scripts.segno" } r4\mf es-. es-. | r es2 | r4 f-. f-. | es( f es) | r4 es-. es-. | 
-    r4 es-. es-. | r es( es) | es-. r es-. | r es-. r | r g( es) | r f( des) | r es-. es-. | es-- f-- g-- | r4 f-. es-. | 
-    r4 es-. es-. | r es2 | r4 f-. f-. | es( f es) | r4 es-. es-. | 
-    r4 es-. es-. | r es( es) | es-. r es-. | r es-. r | r g( es) | bes'8-- as-- g4-. f-. | es8-- f-- es4-. es8-- f-- | es4-. r r |
-    \mark \markup { \musicglyph #"scripts.coda" } 
-    \bar "||" \key es \major \break
-    as4-. r r | r r f8-- bes-- | g4-. es8( f) g-. bes-. | es,4( g bes-.) | r d8( c) b-. as-. | f4-- f4-. f4-. | c'2 f,4( | f4) g2 | 
-    r4 f-. f-. | r f2 | r4 bes8( a) g-. f-. | d4-- bes-- bes'-- | as-. r r | 
-    f4-- c'-- as-- | g4-. r r | R2.^\markup {\musicglyph #"scripts.segno" _ \musicglyph #"scripts.coda" } | 
-    \break
-  
-    % Trio
-    \mark \markup { \musicglyph #"scripts.coda" }
-    \key des \major
-    \repeat volta 2 { 
-      r4\mp f-. f-. | r f-. f-. | r4 ges-. ges-. | ges8 ges8 ges4-. ges4-. | 
-      r4\< f-- f-. | r ges-- ges-.\! | \break
+  \key es \major
+  \time 2/4
+  {
+    es8-> \f bes'16 as g as bes c | bes8 g8 es4 | as8. \p \< g16 f8 es8 | d8 \! r8 r4 |
+    \repeat volta 2 {
+      r8 g \mf r g | r8 g r g | r8 g r g | r8 g r g | r8 g r g | r8 g r g | r as16 as as8 as | \tuplet 3/2 { as8 f as } as4 |
+      as8 as r as | r8 as r as | r8 as r as | r8 as r as | r8 as r as | r8 as r as | r g16 g g8 g | g g g g |
+      r8 g \mf r g | r8 g r g ( | bes8-. ) es ( d  c | bes as g f ) | es g r g | r g r g | r as16 as as8 as | \tuplet 3/2 { as8 es as } as4 |
+      as8 as r as | r8 as r as | r8 g r g | r8 g r g | r8 as r as | r8 as r as | r g16 g g8 g |
     }
     \alternative {
-      { as,4-- as'-- f8-- des-- | es8 es es4-. f-- | r4 ges-. ges-. | r ges-- ges-. | r4 f( f) | f-. f8 des es f | 
-        r4 bes8( as) g-. f-. | es4-- f-- g-- | as-. r es-. | r4\> es8-. f-. ges-. as-. \! | \break }
-      { r4 f-- f8 f | es8 es es4-. f-- |r4 ges-. ges-. | ges-- as-- ges-- | r f-. f-- | f4-. r f | }
+      { g8 r r4 | }
+      { g8 r g-> r | }
     }
-    f2 es4 | des2 des4 | des2\> es4\! | des-.\p r r | des-.\pp r r | des2.\pp
+    \bar "||"
+    \break
+
+    \mark "Trio"
+    es8. \mf \< ( e16 f8. e16 | es8-. ) \! r8 bes'4-- | r8 es, r es | r c' \> ( b bes \! ) |
+    \key as \major
+    \mark \markup { \musicglyph #"scripts.segno" }
+    \set Score.repeatCommands = #'(start-repeat)
+      as2~ \p | as4 as | as2~ | as2 | bes2~ | bes4 g | r8 as16 as as8 as | as as as as |
+      r8 as r as | r8 as r as | r8 g r g | r8 g16 g g8 g | r8 g r g | r8 g r g | r as16 as as8 as | as as as as |
+      r8 as \p r as | r8 as r as | r8 as r as | r8 as r as | r g r g | r g r g | r as16 as as8 as | as as as as |
+      r8 as \< r as | r8 as r as | as8 as r as | r8 as r as | r g \f r g | r g r g | r as16 as as8 as | 
+    \set Score.repeatCommands = #'((volta "1."))
+      as8 \noBeam c \> ( b bes ) \! |
+    \set Score.repeatCommands = #'((volta #f) end-repeat (volta "2."))
+      as8 \breathe bes c16 ( bes ) as g \bar "||"
+    \set Score.repeatCommands = #(list (list 'volta fine) '(volta #f))
+      as8 r as8 r
+    \set Score.repeatCommands = #'((volta #f))
+    \break
+    
+    \repeat volta 2 {
+      f4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2 | f2 \p \glissando |
+      bes8 es, r es | r es \< r es | r es \mf r es | r es \< r es | r es \f r es | r es r es | r es16 es es8 es |
+    }
+    \alternative {
+      { es8 \breathe bes' \f c16 ( bes ) as g | }
+      { es8 \noBeam c' \> ( b bes ) \! | }
+    }
     \bar "|."
+    \mark \markup { \musicglyph #"scripts.segno" }
+  }
+}
+
+wastl = \relative c {
+  \clef bass
+  \key es \major
+  \time 2/4
+  {
+    es8-> \f bes'16 as g as bes c | bes8 g8 es4 | as8. \p \< g16 f8 es8 | d8 \! r8 r4 |
+    \repeat volta 2 {
+      r8 g \mf r g | r8 g r g | r8 g r g | r8 g r g | r8 g r g | r8 g r g | r as16 as as8 as | \tuplet 3/2 { as8 f as } as4 |
+      as8 as r as | r8 as r as | r8 as r as | r8 as r as | r8 as r as | r8 as r as | r g16 g g8 g | g g g g |
+      r8 g \mf r g | r8 g r g ( | bes8-. ) es ( d  c | bes as g f ) | es g r g | r g r g | r as16 as as8 as | \tuplet 3/2 { as8 es as } as4 |
+      as8 as r as | r8 as r as | r8 g r g | r8 g r g | r8 as r as | r8 as r as | r g16 g g8 g |
+    }
+    \alternative {
+      { g8 r r4 | }
+      { g8 r g-> r | }
+    }
+    \bar "||"
+    \break
+
+    \mark "Trio"
+    es8. \mf \< ( e16 f8. e16 | es8-. ) \! r8 bes'4-- | r8 es, r es | r c' \> ( b bes \! ) |
+    \key as \major
+    \mark \markup { \musicglyph #"scripts.segno" }
+    \set Score.repeatCommands = #'(start-repeat)
+      as2~ \p | as4 as | as2~ | as2 | bes2~ | bes4 g | r8 as16 as as8 as | as as as as |
+      r8 as r as | r8 as r as | r8 g r g | r8 g16 g g8 g | r8 g r g | r8 g r g | r as16 as as8 as | as as as as |
+      r8 as \p r as | r8 as r as | r8 as r as | r8 as r as | r g r g | r g r g | r as16 as as8 as | as as as as |
+      r8 as \< r as | r8 as r as | as8 as r as | r8 as r as | r g \f r g | r g r g | r as16 as as8 as | 
+    \set Score.repeatCommands = #'((volta "1."))
+      as8 \noBeam c \> ( b bes ) \! |
+    \set Score.repeatCommands = #'((volta #f) end-repeat (volta "2."))
+      as8 \breathe bes c16 ( bes ) as g \bar "||"
+    \set Score.repeatCommands = #(list (list 'volta fine) '(volta #f))
+      as8 r as8 r
+    \set Score.repeatCommands = #'((volta #f))
+    \break
+    
+    \repeat volta 2 {
+      f4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2 | f2 \p \glissando |
+      bes8 es, r es | r es \< r es | r es \mf r es | r es \< r es | r es \f r es | r es r es | r es16 es es8 es |
+    }
+    \alternative {
+      { es8 \breathe bes' \f c16 ( bes ) as g | }
+      { es8 \noBeam c' \> ( b bes ) \! | }
+    }
+    \bar "|."
+    \mark \markup { \musicglyph #"scripts.segno" }
   }
 }
 
@@ -203,7 +270,7 @@ willi = \relative c, {
       as8 \f r es r | as4 ( f8 ) d | es r bes'4-- | es8-_ r16 c bes8 g | f r bes r | f \noBeam bes [ c d ] | es8-_ r16 c bes8 g |
     }
     \alternative {
-      { es8 c' bes16 ( as ) g f | }
+      { es8 c' \> bes16 ( as ) g f \! | }
       { es8 r es-> r | }
     }
     \bar "||"

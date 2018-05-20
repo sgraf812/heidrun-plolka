@@ -12,11 +12,14 @@
     { instrumentName = #"Bertl in C " shortInstrumentName = #"Bertl " }
     \bertl
     \new Staff \with
-    { instrumentName = #"Posaune 1 in C " shortInstrumentName = #"Pos. 1 " }
-    \trbOne
+    { instrumentName = #"Leonhard in C " shortInstrumentName = #"Leonhard " }
+    \leonhard
     \new Staff \with
-    { instrumentName = #"Posaune 2 in C " shortInstrumentName = #"Pos. 2 " }
-    \trbTwo
+    { instrumentName = #"Gerhard in C " shortInstrumentName = #"Gerhard " }
+    \gerhard
+    \new Staff \with
+    { instrumentName = #"Wastl in C " shortInstrumentName = #"Wastl " }
+    \wastl
     \new Staff \with
     { instrumentName = #"Willi in C " shortInstrumentName = #"Willi " }
     \willi
