@@ -6,22 +6,22 @@
 \score {
   <<
     \new Staff \with
-    { instrumentName = #"Thomas in C " shortInstrumentName = #"Thomas " }
+    { instrumentName = #"Thomas " shortInstrumentName = #"Tho" }
     \thomas
     \new Staff \with
-    { instrumentName = #"Bertl in C " shortInstrumentName = #"Bertl " }
+    { instrumentName = #"Bertl" shortInstrumentName = #"Ber" }
     \bertl
     \new Staff \with
-    { instrumentName = #"Leonhard in C " shortInstrumentName = #"Leonhard " }
+    { instrumentName = #"Leonhard" shortInstrumentName = #"Leo" }
     \leonhard
     \new Staff \with
-    { instrumentName = #"Gerhard in C " shortInstrumentName = #"Gerhard " }
+    { instrumentName = #"Gerhard" shortInstrumentName = #"Ger" }
     \gerhard
     \new Staff \with
-    { instrumentName = #"Wastl in C " shortInstrumentName = #"Wastl " }
+    { instrumentName = #"Wastl" shortInstrumentName = #"Was" }
     \wastl
     \new Staff \with
-    { instrumentName = #"Willi in C " shortInstrumentName = #"Willi " }
+    { instrumentName = #"Willi" shortInstrumentName = #"Wil" }
     \willi
   >>
 }

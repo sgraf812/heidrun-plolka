@@ -146,7 +146,7 @@ leonhard = \relative c' {
     
     \repeat volta 2 {
       f4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2 | as2 \p \glissando |
-      des8 bes r bes | r bes \< r bes | r as \mf r as | r as \< r as | r g \f r g | r g r g | r as16 as as8 as |
+      bes8 bes r bes | r bes \< r bes | r as \mf r as | r as \< r as | r g \f r g | r g r g | r as16 as as8 as |
     }
     \alternative {
       { as8 \breathe bes \f c16 ( bes ) as g | }
