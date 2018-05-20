@@ -164,43 +164,43 @@ gerhard = \relative c {
   {
     es8-> \f bes'16 as g as bes c | bes8 g8 es4 | as8. \p \< g16 f8 es8 | d8 \! r8 r4 |
     \repeat volta 2 {
-      r8 g \mf r g | r8 g r g | r8 g r g | r8 g r g | r8 g r g | r8 g r g | r as16 as as8 as | \tuplet 3/2 { as8 f as } as4 |
-      as8 as r as | r8 as r as | r8 as r as | r8 as r as | r8 as r as | r8 as r as | r g16 g g8 g | g g g g |
-      r8 g \mf r g | r8 g r g ( | bes8-. ) es ( d  c | bes as g f ) | es g r g | r g r g | r as16 as as8 as | \tuplet 3/2 { as8 es as } as4 |
-      as8 as r as | r8 as r as | r8 g r g | r8 g r g | r8 as r as | r8 as r as | r g16 g g8 g |
+      r8 es' \mf r es | r8 es r es | r8 es r es | r8 es16 es es8 es | r8 es r es | r8 es r es | r d16 d d8 d | \tuplet 3/2 { d8 bes d } f4 |
+      d8 d r d | r8 d r d | r8 d r d | r8 d16 d d8 d | r8 d r d | r8 d r d | r es16 es es8 es | es bes ( g f ) |
+      es4 \mf f8 ( g | as bes c d | es2 ) | r8 es, ( g bes ) | es es r es | r es r es | r c16 c c8 c | \tuplet 3/2 { c8 as c } es4 |
+      c8 c r c | r8 d r d | r8 es r es | r8 es16 es es8 es | r8 f r f | r8 d r d | r es16 es es8 es |
     }
     \alternative {
-      { g8 r r4 | }
-      { g8 r g-> r | }
+      { es8 r r4 | }
+      { es8 r es-> r | }
     }
     \bar "||"
     \break
 
     \mark "Trio"
-    es8. \mf \< ( e16 f8. e16 | es8-. ) \! r8 bes'4-- | r8 es, r es | r c' \> ( b bes \! ) |
+    es,8. \mf \< ( e16 f8. e16 | es8-. ) \! r8 bes'4-- | r8 es r es | r es \> ( d des \! ) |
     \key as \major
     \mark \markup { \musicglyph #"scripts.segno" }
     \set Score.repeatCommands = #'(start-repeat)
-      as2~ \p | as4 as | as2~ | as2 | bes2~ | bes4 g | r8 as16 as as8 as | as as as as |
-      r8 as r as | r8 as r as | r8 g r g | r8 g16 g g8 g | r8 g r g | r8 g r g | r as16 as as8 as | as as as as |
-      r8 as \p r as | r8 as r as | r8 as r as | r8 as r as | r g r g | r g r g | r as16 as as8 as | as as as as |
-      r8 as \< r as | r8 as r as | as8 as r as | r8 as r as | r g \f r g | r g r g | r as16 as as8 as | 
+      c8 \p c r c | r8 c r c | r8 des r des | r8 des des ( d ) | es es r es | r8 es r des | r c16 c c8 c | c es, ( f ) g |
+      r8 c r c | r8 c r c | r8 bes r bes | \tuplet 3/2 { bes8 g8 bes } es4 | r8 es16 es es4 | r8 es,16 es es4 | r8 c'16 c c8 c | c es ( d des ) |
+      r8 c \p r c | r8 c r c | r8 des r des | r8 des des ( d ) | es es r es | r es r des | r c16 c c8 c | c c c c |
+      r8 c \< r c | r8 c r c | des8 des r des | r8 des r f | r es \f r es | r des r des | r c16 c c8 c | 
     \set Score.repeatCommands = #'((volta "1."))
-      as8 \noBeam c \> ( b bes ) \! |
+      c8 \noBeam es \> ( d des ) \! |
     \set Score.repeatCommands = #'((volta #f) end-repeat (volta "2."))
-      as8 \breathe bes c16 ( bes ) as g \bar "||"
+      c8 \breathe bes c16 ( bes ) as g \bar "||"
     \set Score.repeatCommands = #(list (list 'volta fine) '(volta #f))
-      as8 r as8 r
+      c8 r c8 r
     \set Score.repeatCommands = #'((volta #f))
     \break
     
     \repeat volta 2 {
-      f4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2 | f2 \p \glissando |
-      bes8 es, r es | r es \< r es | r es \mf r es | r es \< r es | r es \f r es | r es r es | r es16 es es8 es |
+      f,4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2 | c'2 \p \glissando |
+      des8 des r des | r des \< r des | r c \mf r c | r c \< r f | r es \f r es | r des r des | r c16 c c8 c |
     }
     \alternative {
-      { es8 \breathe bes' \f c16 ( bes ) as g | }
-      { es8 \noBeam c' \> ( b bes ) \! | }
+      { c8 \breathe bes \f c16 ( bes ) as g | }
+      { c8 \noBeam es \> ( d des ) \! | }
     }
     \bar "|."
     \mark \markup { \musicglyph #"scripts.segno" }
@@ -245,7 +245,9 @@ wastl = \relative c {
     \break
     
     \repeat volta 2 {
-      f4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2 | f2 \p \glissando |
+      \ottava #-1
+      \set Staff.ottavation = #"8vb ad lib."
+      f,4-> \f f-> | r8 f16 ( e ) f8 as | c4 c8 des ( | c-> ) g ( as-> ) f | bes,4-> bes4-> | r8 bes16 ( a ) bes8 des | f2 | \ottava #0 f'2 \p \glissando |
       bes8 es, r es | r es \< r es | r es \mf r es | r es \< r es | r es \f r es | r es r es | r es16 es es8 es |
     }
     \alternative {
